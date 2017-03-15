@@ -73,17 +73,14 @@ public class XMLXPath {
 				System.out.println(b.getPrice());
 				System.out.println(b.getPublish_date());
 				System.out.println(b.getDescription());
+				// System.out.println(b.getCost());
 			}
-
-
 
 		} catch (ParserConfigurationException | SAXException | IOException e) {
 			e.printStackTrace();
 		}
 
 	}
-
-
 
 	private static ArrayList<Book> getBooksByCost(Document doc, XPath xpath, double cost) {
 		ArrayList<Book> books = new ArrayList<Book>();
@@ -105,8 +102,9 @@ public class XMLXPath {
 							eElement.getElementsByTagName("title").item(0).getTextContent(),
 							eElement.getElementsByTagName("genre").item(0).getTextContent(),
 							Double.parseDouble(eElement.getElementsByTagName("price").item(0).getTextContent()),
-							(Date)lFormatter.parse(eElement.getElementsByTagName("publish_date").item(0).getTextContent()),							
+							(Date) lFormatter.parse(eElement.getElementsByTagName("publish_date").item(0).getTextContent()),
 							eElement.getElementsByTagName("description").item(0).getTextContent());
+					
 					books.add(b);
 
 				}

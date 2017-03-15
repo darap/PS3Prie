@@ -12,8 +12,7 @@
 							<xsd:element name="genre" type="xsd:string" />
 							<xsd:element name="price">
 								<xsd:simpleType>
-									<xsd:restriction
-										base="xsd:double">
+									<xsd:restriction base="xsd:double">
 										<xsd:minExclusive value="0"></xsd:minExclusive>
 										<xsd:maxExclusive value="100"></xsd:maxExclusive>
 									</xsd:restriction>
@@ -21,6 +20,14 @@
 							</xsd:element>
 							<xsd:element name="publish_date" type="xsd:date" />
 							<xsd:element name="description" type="xsd:string" />
+							<xsd:element name="Cost">
+								<xsd:simpleType>
+									<xsd:restriction base="xsd:double">
+										<xsd:minExclusive value="0"></xsd:minExclusive>
+										<xsd:maxExclusive value="100"></xsd:maxExclusive>
+									</xsd:restriction>
+								</xsd:simpleType>
+							</xsd:element>
 						</xsd:sequence>
 						<xsd:attribute name="id" type="xsd:string" />
 					</xsd:complexType>
@@ -29,6 +36,7 @@
 			<xsd:attribute name="id" type="xsd:int"></xsd:attribute>
 		</xsd:complexType>
 	</xsd:element>
+
 
 
 </xsd:schema>

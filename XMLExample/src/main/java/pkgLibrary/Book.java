@@ -15,9 +15,15 @@ public class Book {
 	private double price;
 	private Date publish_date;
 	private String description;
-
-	public Book() {
-
+	private double Cost;
+	
+	
+	public Book(){
+		
+	}
+	
+	public Book(String id) {
+		this(id,"","","",0,new Date(),"");
 	}
 
 	public Book(String id, String author, String title, String genre, double price, Date publish_date, String description)
@@ -30,9 +36,9 @@ public class Book {
 		this.price = price;
 		this.publish_date = publish_date;
 		this.description = description;
+		this.Cost= price*.80;
 	}
 	
- 
 
 	public String getId() {
 		return id;
@@ -96,8 +102,14 @@ public class Book {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-
 	
+	@XmlAttribute
+	public void setCost(double Cost) {
+		this.Cost = Cost;
+	}
 	
-
+	public double getCost() {
+		return Cost;
+	}
+	
 }
