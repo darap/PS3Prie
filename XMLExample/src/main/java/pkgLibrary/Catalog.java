@@ -40,7 +40,7 @@ public class Catalog {
 	public Book GetBook(String id) throws BookException {
 		Book b = null;
 		for (Book m : books) {
-			if (m.equals(id)) {
+			if (m.getId().equals(id)) {
 				b = m;
 			}
 		}
