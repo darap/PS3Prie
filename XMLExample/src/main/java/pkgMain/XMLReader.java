@@ -21,9 +21,7 @@ public class XMLReader {
 		
 		//	Increase the price of each book
 		IncreasePrice(cat,0.10);
-		for (Book b :cat.getBooks()){
-			b.setCost(b.getPrice()*.8);
-		}
+		
 		//	Write the XML file from 'cat' object
 		WriteXMLFile(cat);
 		
